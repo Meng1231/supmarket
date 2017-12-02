@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "类别管理";
+    ViewBag.MapIcon = "fa fa-calendar-times-o";
+    ViewBag.Map1 = "商品类别管理";
+    ViewBag.Map2 = "类别管理";
+}
+<script src="~/Content/script/Category/Category.js"></script>
+<body>
+    <table id="Category" class="table"></table>
+    <div id="toolbar" class="btn-group">
+        <button id="btn_add" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 添加新类别
+        </button>
+        <button id="btn_edit" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 编 辑
+        </button>
+        <button id="btn_delete" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 删 除
+        </button>
+    </div>
+    <form id="form" method="post">
+        <div class="modal fade" id="myModal"  role="dialog" aria-labelledby="myModalLabel" style="margin-top:120px">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">添加商品类别</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group hidden">
+                            <label for="txt_rolename">类别编号</label>
+                            <input type="text" name="TypeID" class="form-control" id="txt_TypeID" placeholder="">
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="txt_rolename">类别名称</label>
+                            <input type="text" name="TypeName" class="form-control" id="txt_TypeName" placeholder="填写商品新类别">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default fa fa-close" data-dismiss="modal"> 关闭</button>
+                        <button type="button" id="btn_submit" class="btn btn-primary fa fa-save" data-dismiss="modal"> 保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+

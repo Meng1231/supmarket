@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "销售详情";
+    ViewBag.MapIcon = "fa fa fa-laptop";
+    ViewBag.Map1 = "销售管理";
+    ViewBag.Map2 = "销售详情";
+}
+<script src="~/Content/script/Sales/Sales.js"></script>
+<table id="Sales" class="table"></table>
+<div id="toolbar" class="btn-group">
+    <label>销售员</label> &nbsp;
+    <select name="AmdnID" style="width:190px;" id="SalesName">
+        <option value="0">全部</option>
+    </select>
+</div>
+<form id="form" method="post">
+    <div class="modal fade" id="DetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top:120px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">销售详情</h4>
+                </div>
+                <div class="modal-body">
+                    <table id="Detail" class="table"></table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default fa fa-close" id="detailtEdit" data-dismiss="modal"> 关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "登录";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <link href="~/Content/Layout/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/Login/login.css" rel="stylesheet" />
+    <script src="~/Content/script/jquery/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/script/cookie/jquery.cookie.js"></script>
+    <script src="~/Content/script/Login/Login.js"></script>
+</head>
+<body>
+    <div style="position: absolute; z-index: 999; top: 20px; left: 20px; color: #fff; font-size: 13px; line-height: 22px;">
+        欢迎使用超市管理系统
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="logo">
+                <i class="fa fa-modx"></i>
+                <h1><span>奇迹</span>超市管理平台</h1>
+            </div>
+            <form class="form">
+                <div class="row">
+                    <input id="txt_account" type="text" placeholder="用户名/手机号/邮箱">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="row">
+                    <input id="txt_password" type="password" placeholder="登录密码">
+                    <i class="fa fa-key"></i>
+                </div>
+                <div class="row">
+                    <input id="txt_code" maxlength="4" type="text" placeholder="验证码" style="width: 190px; float: left;">
+                    <div style="width: 110px; float: right; padding-top: 14px; padding-left: 14px;">
+                        看不清？<a id="switchCode" href="javascript:void();" style="text-decoration: none;">换一张</a>
+                        <img id="imgcode" class="authcode" src="~/Login/GetAuthCode" width="80" height="25" />
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="login_button" type="button"><span>登录</span></button>
+                </div>
+                <div class="row">
+                </div>
+            </form>
+            <div class="login_tips"></div>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <a href="javascript:void();" style="text-decoration:none;color:#fff;">奇迹开发团队出品</a>
+        <br>
+        适用浏览器：IE8以上、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.
+    </div>
+</body>
+</html>
+
